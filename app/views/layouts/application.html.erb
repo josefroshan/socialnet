@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Socialnet | <%= @title %></title>
+    <title><%= title %></title>
+		<%= render 'layouts/stylesheets' %>
+<%= javascript_include_tag :defaults %>
+
 		<%= csrf_meta_tag %>
   </head>
   <body>
-    <%= yield %>
+    <div class="main">
+  <%= render 'layouts/header' %>
+  <%= yield %>
+  <%= render 'layouts/footer' %>
+  </div>
+</div>
   </body>
 </html>
 
